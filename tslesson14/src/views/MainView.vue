@@ -37,8 +37,6 @@ let routerMenu=$store.routerMenu.map((item:any,index:any)=>{
 let router=useRoute()
 onMounted(()=>{
     let currentroute=router.path
-    console.log(currentroute);
-    console.log(routerMenu.filter((item:any)=>('/main/'+item.path)==currentroute)[0]);
     activeIndex.value=routerMenu.filter((item:any)=>('/main/'+item.path)==currentroute)[0]?routerMenu.filter((item:any)=>('/main/'+item.path)==currentroute)[0].id:1
 })
 </script>
